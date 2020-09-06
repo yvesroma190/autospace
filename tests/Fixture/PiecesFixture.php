@@ -26,6 +26,7 @@ class PiecesFixture extends TestFixture
         'marque_id' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
         'prix' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
         'etat_id' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
+        'fournisseur_id' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         'modified' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         '_constraints' => [
@@ -56,8 +57,9 @@ class PiecesFixture extends TestFixture
                 'marque_id' => 'Lorem ipsum dolor sit amet',
                 'prix' => 1,
                 'etat_id' => 'Lorem ipsum dolor sit amet',
-                'created' => '2020-05-23 22:45:33',
-                'modified' => '2020-05-23 22:45:33',
+                'fournisseur_id' => 'Lorem ipsum dolor sit amet',
+                'created' => '2020-09-02 02:40:25',
+                'modified' => '2020-09-02 02:40:25',
             ],
         ];
         parent::init();

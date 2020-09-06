@@ -17,6 +17,7 @@ use Cake\ORM\Entity;
  * @property string|null $marque_id
  * @property float|null $prix
  * @property string|null $etat_id
+ * @property string $fournisseur_id
  * @property \Cake\I18n\FrozenTime|null $created
  * @property \Cake\I18n\FrozenTime|null $modified
  *
@@ -25,6 +26,7 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Modele $modele
  * @property \App\Model\Entity\Marque $marque
  * @property \App\Model\Entity\Etat $etat
+ * @property \App\Model\Entity\Fournisseur $fournisseur
  * @property \App\Model\Entity\Achat[] $achats
  * @property \App\Model\Entity\Piecegallery[] $piecegalleries
  */
@@ -48,6 +50,7 @@ class Piece extends Entity
         'marque_id' => true,
         'prix' => true,
         'etat_id' => true,
+        'fournisseur_id' => true,
         'created' => true,
         'modified' => true,
         'typepiece' => true,
@@ -55,6 +58,7 @@ class Piece extends Entity
         'modele' => true,
         'marque' => true,
         'etat' => true,
+        'fournisseur' => true,
         'achats' => true,
         'piecegalleries' => true,
     ];

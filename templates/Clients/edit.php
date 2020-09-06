@@ -26,6 +26,8 @@
                     echo $this->Form->control('tel');
                     echo $this->Form->control('cel');
                     echo $this->Form->control('email');
+                    echo $this->Form->control('password');
+                    echo $this->Form->control('bp');
                     echo $this->Form->control('adresse');
                     echo $this->Form->control('ville_id', ['options' => $villes, 'empty' => true]);
                     echo $this->Form->control('country_id', ['options' => $countries, 'empty' => true]);

@@ -20,6 +20,7 @@
                     <th><?= $this->Paginator->sort('marque_id') ?></th>
                     <th><?= $this->Paginator->sort('prix') ?></th>
                     <th><?= $this->Paginator->sort('etat_id') ?></th>
+                    <th><?= $this->Paginator->sort('fournisseur_id') ?></th>
                     <th><?= $this->Paginator->sort('created') ?></th>
                     <th><?= $this->Paginator->sort('modified') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
@@ -37,6 +38,7 @@
                     <td><?= $piece->has('marque') ? $this->Html->link($piece->marque->name, ['controller' => 'Marques', 'action' => 'view', $piece->marque->id]) : '' ?></td>
                     <td><?= $this->Number->format($piece->prix) ?></td>
                     <td><?= $piece->has('etat') ? $this->Html->link($piece->etat->name, ['controller' => 'Etats', 'action' => 'view', $piece->etat->id]) : '' ?></td>
+                    <td><?= $piece->has('fournisseur') ? $this->Html->link($piece->fournisseur->name, ['controller' => 'Fournisseurs', 'action' => 'view', $piece->fournisseur->id]) : '' ?></td>
                     <td><?= h($piece->created) ?></td>
                     <td><?= h($piece->modified) ?></td>
                     <td class="actions">

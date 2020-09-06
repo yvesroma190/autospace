@@ -64,6 +64,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * to use (in this case, templates/Pages/home.php)...
      */
     //$builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+	$builder->connect('/', ['controller' => 'Voitures', 'action' => 'index']);
 
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
@@ -87,7 +88,10 @@ $routes->scope('/', function (RouteBuilder $builder) {
 });
 
 
-
+Router::prefix('admin', function (RouteBuilder $routes) {
+    $routes->connect('/', ['controller' => 'Commandes', 'action' => 'index']);
+    $routes->fallbacks(DashedRoute::class);
+});
 
 /*
  * If you need a different set of middleware or none at all,
@@ -102,14 +106,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
  */
 
 //Front Routes
-Router::scope('/', function ($routes) {
+/* Router::scope('/', function ($routes) {
     $routes->connect('/', ['controller' => 'Voitures', 'action' => 'index']);
-    });
+    }); */
     
-
-
- // Manager Routes
- Router::scope('/', ['plugin' => 'Manager'], function ($routes) {
-    $routes->connect('/manager', ['controller' => 'Users', 'action' => 'index']);
-});
 

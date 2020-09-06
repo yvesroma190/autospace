@@ -25,6 +25,7 @@
                     echo $this->Form->control('marque_id', ['options' => $marques, 'empty' => true]);
                     echo $this->Form->control('prix');
                     echo $this->Form->control('etat_id', ['options' => $etats, 'empty' => true]);
+                    echo $this->Form->control('fournisseur_id', ['options' => $fournisseurs]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

@@ -31,6 +31,7 @@ class PiecesTableTest extends TestCase
         'app.Modeles',
         'app.Marques',
         'app.Etats',
+        'app.Fournisseurs',
         'app.Achats',
         'app.Piecegalleries',
     ];

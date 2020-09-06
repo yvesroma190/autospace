@@ -16,6 +16,7 @@ use Cake\Validation\Validator;
  * @property \App\Model\Table\ModelesTable&\Cake\ORM\Association\BelongsTo $Modeles
  * @property \App\Model\Table\MarquesTable&\Cake\ORM\Association\BelongsTo $Marques
  * @property \App\Model\Table\EtatsTable&\Cake\ORM\Association\BelongsTo $Etats
+ * @property \App\Model\Table\FournisseursTable&\Cake\ORM\Association\BelongsTo $Fournisseurs
  * @property \App\Model\Table\AchatsTable&\Cake\ORM\Association\HasMany $Achats
  * @property \App\Model\Table\PiecegalleriesTable&\Cake\ORM\Association\HasMany $Piecegalleries
  *
@@ -62,6 +63,10 @@ class PiecesTable extends Table
         ]);
         $this->belongsTo('Etats', [
             'foreignKey' => 'etat_id',
+        ]);
+        $this->belongsTo('Fournisseurs', [
+            'foreignKey' => 'fournisseur_id',
+            'joinType' => 'INNER',
         ]);
         $this->hasMany('Achats', [
             'foreignKey' => 'piece_id',
@@ -116,6 +121,7 @@ class PiecesTable extends Table
         $rules->add($rules->existsIn(['modele_id'], 'Modeles'));
         $rules->add($rules->existsIn(['marque_id'], 'Marques'));
         $rules->add($rules->existsIn(['etat_id'], 'Etats'));
+        $rules->add($rules->existsIn(['fournisseur_id'], 'Fournisseurs'));
 
         return $rules;
     }

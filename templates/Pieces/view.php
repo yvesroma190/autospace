@@ -47,6 +47,10 @@
                     <td><?= $piece->has('etat') ? $this->Html->link($piece->etat->name, ['controller' => 'Etats', 'action' => 'view', $piece->etat->id]) : '' ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Fournisseur') ?></th>
+                    <td><?= $piece->has('fournisseur') ? $this->Html->link($piece->fournisseur->name, ['controller' => 'Fournisseurs', 'action' => 'view', $piece->fournisseur->id]) : '' ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($piece->id) ?></td>
                 </tr>

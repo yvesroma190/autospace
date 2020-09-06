@@ -19,6 +19,7 @@
                 <?php
                     echo $this->Form->control('voiture_id', ['options' => $voitures, 'empty' => true]);
                     echo $this->Form->control('client_id', ['options' => $clients, 'empty' => true]);
+                    echo $this->Form->control('pt');
                     echo $this->Form->control('date', ['empty' => true]);
                 ?>
             </fieldset>

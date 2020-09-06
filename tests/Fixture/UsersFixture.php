@@ -54,8 +54,8 @@ class UsersFixture extends TestFixture
                 'cel' => 'Lorem ipsum dolor sit amet',
                 'email' => 'Lorem ipsum dolor sit amet',
                 'usergroup_id' => 'Lorem ipsum dolor sit amet',
-                'created' => '2020-05-23 22:45:35',
-                'modified' => '2020-05-23 22:45:35',
+                'created' => '2020-08-28 17:43:55',
+                'modified' => '2020-08-28 17:43:55',
             ],
         ];
         parent::init();

@@ -20,6 +20,7 @@ class CommandesFixture extends TestFixture
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'voiture_id' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
         'client_id' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null],
+        'pt' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => ''],
         'date' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         'created' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
         'modified' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
@@ -45,9 +46,10 @@ class CommandesFixture extends TestFixture
                 'id' => 1,
                 'voiture_id' => 'Lorem ipsum dolor sit amet',
                 'client_id' => 'Lorem ipsum dolor sit amet',
-                'date' => '2020-05-23 22:45:28',
-                'created' => '2020-05-23 22:45:28',
-                'modified' => '2020-05-23 22:45:28',
+                'pt' => 1,
+                'date' => '2020-08-28 17:37:00',
+                'created' => '2020-08-28 17:37:00',
+                'modified' => '2020-08-28 17:37:00',
             ],
         ];
         parent::init();

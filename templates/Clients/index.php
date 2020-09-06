@@ -16,6 +16,8 @@
                     <th><?= $this->Paginator->sort('tel') ?></th>
                     <th><?= $this->Paginator->sort('cel') ?></th>
                     <th><?= $this->Paginator->sort('email') ?></th>
+                    <th><?= $this->Paginator->sort('password') ?></th>
+                    <th><?= $this->Paginator->sort('bp') ?></th>
                     <th><?= $this->Paginator->sort('adresse') ?></th>
                     <th><?= $this->Paginator->sort('ville_id') ?></th>
                     <th><?= $this->Paginator->sort('country_id') ?></th>
@@ -32,6 +34,8 @@
                     <td><?= h($client->tel) ?></td>
                     <td><?= h($client->cel) ?></td>
                     <td><?= h($client->email) ?></td>
+                    <td><?= h($client->password) ?></td>
+                    <td><?= h($client->bp) ?></td>
                     <td><?= h($client->adresse) ?></td>
                     <td><?= $client->has('ville') ? $this->Html->link($client->ville->name, ['controller' => 'Villes', 'action' => 'view', $client->ville->id]) : '' ?></td>
                     <td><?= $client->has('country') ? $this->Html->link($client->country->name, ['controller' => 'Countries', 'action' => 'view', $client->country->id]) : '' ?></td>

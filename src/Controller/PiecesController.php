@@ -20,7 +20,7 @@ class PiecesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Typepieces', 'Categories', 'Modeles', 'Marques', 'Etats'],
+            'contain' => ['Typepieces', 'Categories', 'Modeles', 'Marques', 'Etats', 'Fournisseurs'],
         ];
         $pieces = $this->paginate($this->Pieces);
 
@@ -37,7 +37,7 @@ class PiecesController extends AppController
     public function view($id = null)
     {
         $piece = $this->Pieces->get($id, [
-            'contain' => ['Typepieces', 'Categories', 'Modeles', 'Marques', 'Etats', 'Achats', 'Piecegalleries'],
+            'contain' => ['Typepieces', 'Categories', 'Modeles', 'Marques', 'Etats', 'Fournisseurs', 'Achats', 'Piecegalleries'],
         ]);
 
         $this->set('piece', $piece);
@@ -65,7 +65,8 @@ class PiecesController extends AppController
         $modeles = $this->Pieces->Modeles->find('list', ['limit' => 200]);
         $marques = $this->Pieces->Marques->find('list', ['limit' => 200]);
         $etats = $this->Pieces->Etats->find('list', ['limit' => 200]);
-        $this->set(compact('piece', 'typepieces', 'categories', 'modeles', 'marques', 'etats'));
+        $fournisseurs = $this->Pieces->Fournisseurs->find('list', ['limit' => 200]);
+        $this->set(compact('piece', 'typepieces', 'categories', 'modeles', 'marques', 'etats', 'fournisseurs'));
     }
 
     /**
@@ -94,7 +95,8 @@ class PiecesController extends AppController
         $modeles = $this->Pieces->Modeles->find('list', ['limit' => 200]);
         $marques = $this->Pieces->Marques->find('list', ['limit' => 200]);
         $etats = $this->Pieces->Etats->find('list', ['limit' => 200]);
-        $this->set(compact('piece', 'typepieces', 'categories', 'modeles', 'marques', 'etats'));
+        $fournisseurs = $this->Pieces->Fournisseurs->find('list', ['limit' => 200]);
+        $this->set(compact('piece', 'typepieces', 'categories', 'modeles', 'marques', 'etats', 'fournisseurs'));
     }
 
     /**

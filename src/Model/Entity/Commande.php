@@ -11,6 +11,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string|null $voiture_id
  * @property string|null $client_id
+ * @property float $pt
  * @property \Cake\I18n\FrozenTime|null $date
  * @property \Cake\I18n\FrozenTime|null $created
  * @property \Cake\I18n\FrozenTime|null $modified
@@ -32,6 +33,7 @@ class Commande extends Entity
     protected $_accessible = [
         'voiture_id' => true,
         'client_id' => true,
+        'pt' => true,
         'date' => true,
         'created' => true,
         'modified' => true,

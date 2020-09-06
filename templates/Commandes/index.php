@@ -14,6 +14,7 @@
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('voiture_id') ?></th>
                     <th><?= $this->Paginator->sort('client_id') ?></th>
+                    <th><?= $this->Paginator->sort('pt') ?></th>
                     <th><?= $this->Paginator->sort('date') ?></th>
                     <th><?= $this->Paginator->sort('created') ?></th>
                     <th><?= $this->Paginator->sort('modified') ?></th>
@@ -26,6 +27,7 @@
                     <td><?= $this->Number->format($commande->id) ?></td>
                     <td><?= $commande->has('voiture') ? $this->Html->link($commande->voiture->name, ['controller' => 'Voitures', 'action' => 'view', $commande->voiture->id]) : '' ?></td>
                     <td><?= $commande->has('client') ? $this->Html->link($commande->client->name, ['controller' => 'Clients', 'action' => 'view', $commande->client->id]) : '' ?></td>
+                    <td><?= $this->Number->format($commande->pt) ?></td>
                     <td><?= h($commande->date) ?></td>
                     <td><?= h($commande->created) ?></td>
                     <td><?= h($commande->modified) ?></td>

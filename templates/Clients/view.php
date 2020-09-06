@@ -35,6 +35,14 @@
                     <td><?= h($client->email) ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Password') ?></th>
+                    <td><?= h($client->password) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Bp') ?></th>
+                    <td><?= h($client->bp) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Adresse') ?></th>
                     <td><?= h($client->adresse) ?></td>
                 </tr>
@@ -105,6 +113,7 @@
                             <th><?= __('Id') ?></th>
                             <th><?= __('Voiture Id') ?></th>
                             <th><?= __('Client Id') ?></th>
+                            <th><?= __('Pt') ?></th>
                             <th><?= __('Date') ?></th>
                             <th><?= __('Created') ?></th>
                             <th><?= __('Modified') ?></th>
@@ -115,6 +124,7 @@
                             <td><?= h($commandes->id) ?></td>
                             <td><?= h($commandes->voiture_id) ?></td>
                             <td><?= h($commandes->client_id) ?></td>
+                            <td><?= h($commandes->pt) ?></td>
                             <td><?= h($commandes->date) ?></td>
                             <td><?= h($commandes->created) ?></td>
                             <td><?= h($commandes->modified) ?></td>

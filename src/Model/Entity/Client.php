@@ -13,6 +13,8 @@ use Cake\ORM\Entity;
  * @property string|null $tel
  * @property string|null $cel
  * @property string|null $email
+ * @property string $password
+ * @property string $bp
  * @property string|null $adresse
  * @property string|null $ville_id
  * @property string|null $country_id
@@ -40,6 +42,8 @@ class Client extends Entity
         'tel' => true,
         'cel' => true,
         'email' => true,
+        'password' => true,
+        'bp' => true,
         'adresse' => true,
         'ville_id' => true,
         'country_id' => true,
@@ -49,5 +53,14 @@ class Client extends Entity
         'country' => true,
         'achats' => true,
         'commandes' => true,
+    ];
+
+    /**
+     * Fields that are excluded from JSON versions of the entity.
+     *
+     * @var array
+     */
+    protected $_hidden = [
+        'password',
     ];
 }

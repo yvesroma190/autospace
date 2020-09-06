@@ -65,6 +65,11 @@ class CommandesTable extends Table
             ->add('id', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
+            ->numeric('pt')
+            ->requirePresence('pt', 'create')
+            ->notEmptyString('pt');
+
+        $validator
             ->dateTime('date')
             ->allowEmptyDateTime('date');
 

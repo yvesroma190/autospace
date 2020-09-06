@@ -31,6 +31,10 @@
                     <td><?= $this->Number->format($commande->id) ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Pt') ?></th>
+                    <td><?= $this->Number->format($commande->pt) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Date') ?></th>
                     <td><?= h($commande->date) ?></td>
                 </tr>

@@ -92,6 +92,18 @@ class ClientsTable extends Table
             ->allowEmptyString('email');
 
         $validator
+            ->scalar('password')
+            ->maxLength('password', 255)
+            ->requirePresence('password', 'create')
+            ->notEmptyString('password');
+
+        $validator
+            ->scalar('bp')
+            ->maxLength('bp', 45)
+            ->requirePresence('bp', 'create')
+            ->notEmptyString('bp');
+
+        $validator
             ->scalar('adresse')
             ->maxLength('adresse', 45)
             ->allowEmptyString('adresse');
